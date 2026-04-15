@@ -1,50 +1,64 @@
 export default function CrypLandingPage() {
-  const features = [
+  const featureCards = [
     {
-      title: 'Instant Alerts',
-      text: 'Get notified the moment price levels break, momentum shifts, or opportunity shows up.',
+      title: 'Early Alerts',
+      text: 'Get notified before momentum fully unfolds so you can react faster than the crowd.',
       icon: '⚡',
     },
     {
-      title: 'AI Market Insight',
-      text: 'Understand what matters fast with simplified signal context and market summaries.',
+      title: 'AI Insight',
+      text: 'Understand why a move matters without digging through charts, noise, and endless feeds.',
       icon: '🧠',
     },
     {
       title: 'Telegram Native',
-      text: 'Everything lands straight in Telegram so you can act fast without opening ten tabs.',
+      text: 'Everything comes straight to Telegram, so your edge lives where you already move fastest.',
       icon: '📲',
     },
     {
       title: 'Trade Opportunities',
-      text: 'Spot possible setups earlier with sharper signal delivery and faster market awareness.',
+      text: 'Spot cleaner setups, stronger momentum, and better timing with less second-guessing.',
       icon: '📈',
     },
+  ];
+
+  const edgePoints = [
+    'Get alerts before moves happen',
+    'Read the market in seconds, not hours',
+    'No dashboards, no clutter, no overwhelm',
+    'Move faster than most retail traders',
+  ];
+
+  const painPoints = [
+    'Miss breakout opportunities',
+    'React too late to sudden moves',
+    'Waste hours watching charts',
+    'Make decisions based on emotion instead of data',
+  ];
+
+  const steps = [
+    'Join Cryp on Telegram',
+    'Set your watchlist and alert preferences',
+    'Unlock Pro for full access at 6 USDT',
   ];
 
   const audience = [
     {
       title: 'Beginners',
-      text: 'Start with clean alerts and simple insight instead of overwhelming dashboards.',
+      text: 'Get clean guidance and useful alerts without needing a complicated trading setup.',
     },
     {
       title: 'Busy Traders',
-      text: 'Perfect if you want to stay ahead without watching charts all day.',
+      text: 'Perfect if you want to stay sharp without staring at charts all day.',
     },
     {
       title: 'Serious Users',
-      text: 'Unlock the full edge with premium alerts, deeper insights, and Pro access.',
+      text: 'Use Pro to unlock faster alerts, deeper insight, and more decision support.',
     },
   ];
 
-  const steps = [
-    'Join the Cryp bot on Telegram',
-    'Set alerts and watchlist preferences',
-    'Upgrade to Pro for full access at 6 USDT',
-  ];
-
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#040714] text-white selection:bg-blue-500/30">
+    <div className="min-h-screen overflow-x-hidden bg-[#030712] text-white selection:bg-blue-500/30">
       <style>{`
         html { scroll-behavior: smooth; }
         @keyframes floatY {
@@ -52,11 +66,11 @@ export default function CrypLandingPage() {
           50% { transform: translateY(-12px); }
         }
         @keyframes pulseGlow {
-          0%, 100% { opacity: .45; transform: scale(1); }
+          0%, 100% { opacity: .4; transform: scale(1); }
           50% { opacity: .9; transform: scale(1.08); }
         }
         @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(18px); }
+          from { opacity: 0; transform: translateY(24px); }
           to { opacity: 1; transform: translateY(0); }
         }
         @keyframes marquee {
@@ -66,7 +80,7 @@ export default function CrypLandingPage() {
         .animate-fade-up { animation: fadeUp .8s ease-out both; }
         .animate-fade-up-2 { animation: fadeUp 1s ease-out .12s both; }
         .animate-fade-up-3 { animation: fadeUp 1.15s ease-out .22s both; }
-        .float-orb { animation: floatY 7s ease-in-out infinite; }
+        .float-orb { animation: floatY 8s ease-in-out infinite; }
         .pulse-glow { animation: pulseGlow 5s ease-in-out infinite; }
         .marquee-track { animation: marquee 24s linear infinite; }
       `}</style>
@@ -74,10 +88,10 @@ export default function CrypLandingPage() {
       <div className="pointer-events-none fixed inset-0">
         <div className="pulse-glow absolute left-[8%] top-24 h-56 w-56 rounded-full bg-blue-500/15 blur-3xl" />
         <div className="float-orb absolute right-[10%] top-40 h-72 w-72 rounded-full bg-indigo-500/12 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-cyan-500/8 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 h-80 w-[42rem] -translate-x-1/2 rounded-full bg-cyan-500/8 blur-3xl" />
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-white/8 bg-[#040714]/75 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/8 bg-[#030712]/75 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-blue-400/25 bg-gradient-to-br from-blue-500/20 to-indigo-500/10 shadow-lg shadow-blue-500/10">
@@ -91,7 +105,7 @@ export default function CrypLandingPage() {
 
           <nav className="hidden items-center gap-8 text-sm text-white/65 md:flex">
             <a href="#features" className="transition hover:text-white">Features</a>
-            <a href="#how" className="transition hover:text-white">How it works</a>
+            <a href="#edge" className="transition hover:text-white">Why Cryp</a>
             <a href="#pricing" className="transition hover:text-white">Pricing</a>
             <a href="#audience" className="transition hover:text-white">Who it&apos;s for</a>
           </nav>
@@ -109,19 +123,19 @@ export default function CrypLandingPage() {
 
       <main id="top">
         <section className="relative">
-          <div className="mx-auto grid max-w-7xl gap-16 px-6 pb-20 pt-20 md:pb-28 md:pt-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 pb-20 pt-20 md:pb-28 md:pt-24 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
             <div>
               <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-blue-400/15 bg-white/[0.03] px-4 py-2 text-sm text-blue-300">
                 <span className="h-2 w-2 rounded-full bg-blue-400" />
                 Live on Telegram
               </div>
 
-              <h1 className="animate-fade-up-2 mt-7 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-                Crypto signals with a <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">premium edge</span>.
+              <h1 className="animate-fade-up-2 mt-7 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+                Most traders are late. <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">Cryp makes you early.</span>
               </h1>
 
               <p className="animate-fade-up-3 mt-7 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
-                Cryp monitors the market 24/7 and delivers alerts, AI insights, and trade opportunities directly to Telegram. Most traders react too late. Cryp helps you move earlier.
+                Real-time alerts, AI insights, and trade opportunities delivered instantly to Telegram so you stop reacting and start anticipating the market.
               </p>
 
               <div className="animate-fade-up-3 mt-10 flex flex-col gap-4 sm:flex-row">
@@ -131,14 +145,18 @@ export default function CrypLandingPage() {
                   rel="noreferrer"
                   className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-8 py-4 text-center text-base font-semibold shadow-2xl shadow-blue-600/20 transition hover:-translate-y-0.5 hover:shadow-blue-500/30"
                 >
-                  Start Free on Telegram
+                  Get Alerts Now
                 </a>
                 <a
                   href="#pricing"
                   className="rounded-full border border-white/12 bg-white/[0.03] px-8 py-4 text-center text-base font-semibold text-white/90 transition hover:bg-white/[0.06]"
                 >
-                  View Pro for 6 USDT
+                  See How Pro Gives You an Edge
                 </a>
+              </div>
+
+              <div className="mt-5 text-sm text-white/45">
+                No setup headaches. No chart overload. Works instantly on Telegram.
               </div>
 
               <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/42">
@@ -146,7 +164,7 @@ export default function CrypLandingPage() {
                 <div className="h-1 w-1 rounded-full bg-white/20" />
                 <div>Telegram-native</div>
                 <div className="h-1 w-1 rounded-full bg-white/20" />
-                <div>Premium Pro at 6 USDT</div>
+                <div>Pro access for 6 USDT</div>
               </div>
             </div>
 
@@ -156,8 +174,8 @@ export default function CrypLandingPage() {
                 <div className="rounded-[1.5rem] border border-white/8 bg-[#060b1f] p-4">
                   <div className="flex items-center justify-between border-b border-white/8 pb-4">
                     <div>
-                      <div className="text-sm font-medium text-white/85">Cryp Terminal</div>
-                      <div className="mt-1 text-xs text-white/40">Live market signal preview</div>
+                      <div className="text-sm font-medium text-white/85">Cryp Live Feed</div>
+                      <div className="mt-1 text-xs text-white/40">What users see inside Telegram</div>
                     </div>
                     <div className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">
                       Online
@@ -168,10 +186,10 @@ export default function CrypLandingPage() {
                     <div className="rounded-2xl border border-blue-400/12 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 p-4">
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-white/55">BTC Alert</span>
-                        <span className="text-blue-300">Triggered</span>
+                        <span className="text-blue-300">Sent Early</span>
                       </div>
                       <div className="mt-3 text-2xl font-semibold">Breakout above resistance</div>
-                      <div className="mt-2 text-sm leading-6 text-white/55">Momentum rising, volatility expanding, watch continuation.</div>
+                      <div className="mt-2 text-sm leading-6 text-white/55">Momentum rising, volatility expanding, continuation in play.</div>
                     </div>
 
                     <div className="grid gap-4 sm:grid-cols-2">
@@ -183,19 +201,19 @@ export default function CrypLandingPage() {
                       <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
                         <div className="text-xs uppercase tracking-[0.22em] text-white/35">Pro Access</div>
                         <div className="mt-3 text-3xl font-semibold">6 USDT</div>
-                        <div className="mt-2 text-sm text-white/45">Unlock premium signals and full access.</div>
+                        <div className="mt-2 text-sm text-white/45">Full signal flow and deeper insight.</div>
                       </div>
                     </div>
 
                     <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
                       <div className="flex items-center justify-between text-sm text-white/55">
-                        <span>Live feed</span>
+                        <span>Signal proof</span>
                         <span>Telegram</span>
                       </div>
                       <div className="mt-4 space-y-3 text-sm text-white/75">
-                        <div className="rounded-xl bg-white/[0.03] px-4 py-3">BTC crossed watch level. Market momentum increasing.</div>
-                        <div className="rounded-xl bg-white/[0.03] px-4 py-3">ETH AI note: consolidation nearing decision point.</div>
-                        <div className="rounded-xl bg-white/[0.03] px-4 py-3">Signal detected: possible continuation setup on high volume.</div>
+                        <div className="rounded-xl bg-white/[0.03] px-4 py-3">🚀 BTC breakout alert sent before move acceleration.</div>
+                        <div className="rounded-xl bg-white/[0.03] px-4 py-3">🧠 ETH AI note: consolidation nearing decision point.</div>
+                        <div className="rounded-xl bg-white/[0.03] px-4 py-3">📈 Signal detected: possible continuation setup on high volume.</div>
                       </div>
                     </div>
                   </div>
@@ -208,8 +226,8 @@ export default function CrypLandingPage() {
             <div className="rounded-full border border-white/8 bg-white/[0.03] py-3">
               <div className="marquee-track flex min-w-max gap-12 px-8 text-sm uppercase tracking-[0.2em] text-white/40">
                 {[
-                  'Alerts', 'AI Insight', 'Signals', 'Telegram Native', 'Fast Setup', '6 USDT Pro',
-                  'Alerts', 'AI Insight', 'Signals', 'Telegram Native', 'Fast Setup', '6 USDT Pro',
+                  'Early Alerts', 'AI Insight', 'Signals', 'Telegram Native', 'Fast Setup', '6 USDT Pro',
+                  'Early Alerts', 'AI Insight', 'Signals', 'Telegram Native', 'Fast Setup', '6 USDT Pro',
                 ].map((item, index) => (
                   <span key={`${item}-${index}`}>{item}</span>
                 ))}
@@ -218,17 +236,32 @@ export default function CrypLandingPage() {
           </div>
         </section>
 
+        <section id="edge" className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Why Cryp</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Why Cryp gives you an edge</h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {edgePoints.map((point) => (
+              <div key={point} className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-6 text-white/88 transition hover:-translate-y-1 hover:border-blue-400/20">
+                {point}
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section id="features" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Features</div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Designed to feel fast, sharp, and unfair.</h2>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Built to feel fast, sharp, and unfair.</h2>
             <p className="mt-5 text-lg leading-8 text-white/62">
-              Cryp is built to reduce noise and surface what matters so you can move with more confidence and less emotion.
+              Cryp cuts through noise and surfaces what matters so you can move with more confidence and less emotion.
             </p>
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {features.map((item) => (
+            {featureCards.map((item) => (
               <div
                 key={item.title}
                 className="group rounded-[1.75rem] border border-white/8 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-400/20 hover:bg-white/[0.05]"
@@ -243,24 +276,36 @@ export default function CrypLandingPage() {
           </div>
         </section>
 
-        <section id="how" className="border-y border-white/8 bg-white/[0.02]">
-          <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-            <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">How it works</div>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">From setup to signal in minutes.</h2>
-                <p className="mt-5 max-w-xl text-lg leading-8 text-white/62">
-                  No complicated dashboard. No learning curve. Join, configure your alerts, and let Cryp do the monitoring for you.
-                </p>
-              </div>
-              <div className="grid gap-4">
-                {steps.map((step, index) => (
-                  <div key={step} className="rounded-[1.5rem] border border-white/8 bg-[#0b1023] p-6">
-                    <div className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">Step {index + 1}</div>
-                    <div className="text-2xl font-medium text-white/92">{step}</div>
-                  </div>
-                ))}
-              </div>
+        <section className="border-y border-white/8 bg-white/[0.02]">
+          <div className="mx-auto max-w-6xl px-6 py-20 text-center md:py-24">
+            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Without Cryp</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">What happens when you are late?</h2>
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {painPoints.map((item) => (
+                <div key={item} className="rounded-[1.5rem] border border-red-400/10 bg-red-500/[0.04] p-6 text-left text-white/78">
+                  ❌ {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="how" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
+          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">How it works</div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">From setup to signal in minutes.</h2>
+              <p className="mt-5 max-w-xl text-lg leading-8 text-white/62">
+                No complicated dashboard. No learning curve. Join, configure your alerts, and let Cryp do the monitoring for you.
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {steps.map((step, index) => (
+                <div key={step} className="rounded-[1.5rem] border border-white/8 bg-[#0b1023] p-6">
+                  <div className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">Step {index + 1}</div>
+                  <div className="text-2xl font-medium text-white/92">{step}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -268,15 +313,15 @@ export default function CrypLandingPage() {
         <section id="pricing" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Pricing</div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Simple access. No friction.</h2>
-            <p className="mt-5 text-lg leading-8 text-white/62">Start free, then unlock full access with Pro for just 6 USDT.</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Start free. Upgrade when you want the real edge.</h2>
+            <p className="mt-5 text-lg leading-8 text-white/62">Use Cryp for free, then unlock the full experience with Pro for just 6 USDT.</p>
           </div>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-2">
             <div className="rounded-[2rem] border border-white/8 bg-white/[0.03] p-8 md:p-10">
               <div className="text-sm font-semibold uppercase tracking-[0.22em] text-white/40">Free</div>
               <div className="mt-4 text-5xl font-semibold">$0</div>
-              <p className="mt-4 max-w-md leading-7 text-white/60">Get started with the essentials and see how Cryp fits your workflow.</p>
+              <p className="mt-4 max-w-md leading-7 text-white/60">Start with the essentials and see how Cryp fits into your trading workflow.</p>
               <ul className="mt-8 space-y-4 text-white/82">
                 <li>• Basic alerts</li>
                 <li>• Limited access</li>
@@ -289,7 +334,7 @@ export default function CrypLandingPage() {
                 rel="noreferrer"
                 className="mt-8 inline-block rounded-full border border-white/12 px-6 py-3 font-semibold transition hover:bg-white/[0.05]"
               >
-                Start Free
+                Get Alerts Now
               </a>
             </div>
 
@@ -302,7 +347,8 @@ export default function CrypLandingPage() {
                 <span className="text-5xl font-semibold">6 USDT</span>
                 <span className="pb-1 text-white/50">one-time for now</span>
               </div>
-              <p className="mt-4 max-w-md leading-7 text-white/72">Unlock premium signals, deeper AI insight, faster alerts, and the full Cryp experience.</p>
+              <p className="mt-2 text-sm text-yellow-300">Early access pricing — may increase soon.</p>
+              <p className="mt-4 max-w-md leading-7 text-white/72">Premium signals, deeper AI insight, faster alerts, and the full Cryp experience for traders who want more than guesswork.</p>
               <ul className="mt-8 space-y-4 text-white/90">
                 <li>• Premium signals</li>
                 <li>• Faster alerts</li>
@@ -310,13 +356,14 @@ export default function CrypLandingPage() {
                 <li>• Better decision support</li>
                 <li>• Built for serious users</li>
               </ul>
+              <p className="mt-4 text-sm text-white/60">Most users upgrade after they see what one good alert can do.</p>
               <a
                 href="https://t.me/+HCrmHvpLg_kzMGY0"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-block rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-6 py-3 font-semibold shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5"
               >
-                Unlock Pro
+                Get Pro Access Now
               </a>
             </div>
           </div>
@@ -326,7 +373,7 @@ export default function CrypLandingPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
             <div className="mx-auto max-w-2xl text-center">
               <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Who it&apos;s for</div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Built for traders who want more edge, less noise.</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Built for traders who want more edge and less noise.</h2>
               <p className="mt-5 text-lg leading-8 text-white/62">
                 Whether you are just getting started or already active in the market, Cryp is built to keep you informed and ready.
               </p>
@@ -348,9 +395,9 @@ export default function CrypLandingPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.18),transparent_35%)]" />
             <div className="relative">
               <div className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Ready to start</div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Stop reacting late.</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">You&apos;re either early… or you&apos;re late.</h2>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/68">
-                Join Cryp today and get the speed, clarity, and signal flow you need directly inside Telegram.
+                Join Cryp today and get the speed, clarity, and signal flow most traders wish they had before the move.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
@@ -359,7 +406,7 @@ export default function CrypLandingPage() {
                   rel="noreferrer"
                   className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-8 py-4 font-semibold shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5"
                 >
-                  Start Free
+                  Get Alerts Now
                 </a>
                 <a
                   href="https://t.me/+HCrmHvpLg_kzMGY0"
@@ -367,7 +414,7 @@ export default function CrypLandingPage() {
                   rel="noreferrer"
                   className="rounded-full border border-white/12 bg-white/[0.03] px-8 py-4 font-semibold transition hover:bg-white/[0.06]"
                 >
-                  Get Pro for 6 USDT
+                  Unlock Pro for 6 USDT
                 </a>
               </div>
             </div>
